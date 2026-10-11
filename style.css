@@ -1346,3 +1346,107 @@ footer {
   }
 
 }
+
+/* ========================================
+   TRAVEL BLOG
+   ======================================== */
+.blog-section {
+  border-top: 1px solid var(--border);
+  background: var(--bg-secondary);
+}
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  align-items: stretch;
+}
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 0;
+  min-height: 100%;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  transition: transform var(--transition), border-color var(--transition);
+}
+.blog-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+}
+.blog-photo {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  background: var(--bg-secondary);
+}
+.blog-card-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+}
+.blog-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 12px;
+  color: var(--primary);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.blog-meta span + span {
+  color: var(--muted);
+  font-weight: 500;
+  letter-spacing: 0;
+}
+.blog-card h3 {
+  margin-bottom: 12px;
+  font-size: 21px;
+  line-height: 1.35;
+}
+.blog-card-content > p {
+  color: var(--muted);
+  font-size: 14px;
+}
+.blog-more {
+  margin-top: auto;
+  padding-top: 18px;
+  width: 100%;
+}
+.blog-more summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+  padding: 10px 14px;
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+  background: rgba(56, 189, 248, .08);
+  visibility: visible;
+  opacity: 1;
+}
+.blog-more summary::-webkit-details-marker { display: none; }
+.blog-more summary i { margin-left: 6px; transition: transform var(--transition); }
+.blog-more[open] summary i { transform: rotate(90deg); }
+.blog-expanded p {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+@media (max-width: 900px) {
+  .blog-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+  .blog-grid { grid-template-columns: 1fr; }
+  .blog-card { min-height: auto; }
+}

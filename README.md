@@ -1,30 +1,11 @@
-# Khem Air Portfolio
+# Khem Air Portfolio — Travel Blog Edition
 
-Profile focus:
-- Python
-- Data Science
-- Data Analyst
-- Machine Learning
-- Full-Stack Developer
+The portfolio includes a photo-led Travel Blog section with three travel/adventure stories. Each card has a landscape photo, short description, category, reading time, and a working Read more disclosure that expands the story.
 
-Education:
-- Bachelor of Information Management (BIM), Tribhuvan University
+## Run locally
+1. Extract the ZIP file.
+2. Open `index.html` in a browser.
+3. An internet connection is required to load the remote travel photos and icon/font assets.
 
-Projects:
-1. GO Trip Sudurpaschim
-2. Explore Nepal
-
-Interests:
-- Trekking
-- Hiking
-- Mountaineering
-- Adventure & Travel
-- Coding
-- Video Editing
-- Photography
-- Exploring New Places
-
-Sections:
-Home → About → Skills → Services → Projects → Development Journey → Contact → Footer
-
-Built with HTML, CSS and JavaScript.
+## Replace a travel photo
+In `index.html`, find an `<img class="blog-photo" ...>` tag and replace its `src` URL with your own image URL. For images stored locally, place them in the `assets` folder and use a path such as `assets/my-trek-photo.jpg`.
